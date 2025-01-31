@@ -87,7 +87,8 @@ const ChatApp = () => {
   }, [messages]);
 
   useEffect(() => {
-    websocket.current = new WebSocket('http://localhost:3001');
+    const wsUrl = process.env.REACT_APP_WS_URL;
+    websocket.current = new WebSocket(wsUrl);
 
     websocket.current.onopen = () => {
       console.log('Connected to WebSocket');
