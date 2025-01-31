@@ -145,7 +145,7 @@ const ChatApp = () => {
             setIsPartnerTyping(false);
             setMessages([{
               type: 'system',
-              content: autoSearch ? 'Partner skipped. Finding new partner in 2 seconds...' : 'Partner skipped. Click Search to find a new partner.'
+              content: autoSearch ? 'Partner skipped. Searching for a new partner...' : 'Partner skipped. Click Search to find a new partner.'
             }]);
             if (autoSearch) {
               setTimeout(() => {
